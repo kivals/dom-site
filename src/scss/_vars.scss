@@ -3,10 +3,11 @@
 :root {
   // base
   --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
-  --container-offset: 15px;
+  --content-width: 1776px;
+  --container-offset: 72px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+  --brand-color: #e5c975;
+  --background-color: #1E1D20;
 }
