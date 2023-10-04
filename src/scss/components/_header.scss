@@ -43,10 +43,7 @@
   align-items: center;
   padding-left: 20px;
   gap: 10px;
-
-  &__burger {
-
-  }
+  cursor: pointer;
 
   &__title {
     color: var(--brand-color);

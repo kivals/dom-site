@@ -3,7 +3,11 @@
 
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+console.log(mobileCheck());
+
+// Реализация модального окна
+// import GraphModal from 'graph-modal';
+// const modal = new GraphModal();
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -29,9 +33,7 @@ console.log(mobileCheck())
 // Реализация включения скролла (не забудьте вызвать функцию)
 // import { enableScroll } from './functions/enable-scroll';
 
-// Реализация модального окна
-// import GraphModal from 'graph-modal';
-// const modal = new GraphModal();
+
 
 // Реализация табов
 // import GraphTabs from 'graph-tabs';

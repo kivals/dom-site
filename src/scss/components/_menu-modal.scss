@@ -1,0 +1,80 @@
+.menu-modal {
+  position: relative;
+  padding: 50px 40px;
+  background-color: var(--background-color);
+  max-width: var(--content-width);
+  width: 90%;
+
+  &__close {
+    width: 60px;
+    height: 60px;
+    background-color: var(--brand-color);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+  }
+
+  &__content {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  &__left {
+
+  }
+
+  &__right {
+    flex-grow: 1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 150px;
+  }
+
+  &__header-text {
+    font-size: 24px;
+    color: var(--gray);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  &__address {
+    font-size: 16px;
+    color: var(--gray);
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  &__footer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+  }
+
+  &__phone {
+    color: white;
+    font-size: 26px;
+  }
+
+  &__email {
+    color: var(--brand-color);
+    font-size: 18px;
+  }
+}
