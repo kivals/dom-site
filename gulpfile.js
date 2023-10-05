@@ -48,6 +48,8 @@ const paths = {
   buildJsFolder: `${buildFolder}/js`,
   srcPartialsFolder: `${srcFolder}/partials`,
   resourcesFolder: `${srcFolder}/resources`,
+  srcVideo: `${srcFolder}/video`,
+  buildVideo: `${buildFolder}/video`,
 };
 
 let isProd = false; // dev by default
@@ -215,6 +217,11 @@ const resources = () => {
     .pipe(dest(buildFolder))
 }
 
+const videos = () => {
+  return src(`${paths.srcVideo}/**`)
+    .pipe(dest(paths.buildVideo))
+}
+
 const images = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`])
     .pipe(gulpif(isProd, image([
@@ -316,11 +323,11 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, scripts, styles, resources, videos, images, webpImages, svgSprites, watchFiles);
 
-exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, svgSprites)
+exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, videos, images, webpImages, svgSprites)
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, videos, images, webpImages, svgSprites, htmlMinify);
 
 exports.cache = series(cache, rewrite);
 
