@@ -6,14 +6,14 @@
   }
 
   &__media {
-    width: 60%;
+    position: relative;
+    width: 70%;
   }
 
   &__video {
     box-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
     width: 100%;
-    height: auto;
-    transition: all 0.3s ease-in;
+    height: 100%;
   }
 
   &__nav {
@@ -23,23 +23,37 @@
   }
 }
 
+.shadow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: .4;
+}
+
 .nav-intro {
   &__item {
+    opacity: 0.7;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    position: relative;
+    z-index: 2;
 
     &:not(:last-child) {
       margin-bottom: 30px;
     }
 
     &:hover {
-      transform: translateX(20px);
+      opacity: 1;
     }
 
     &[data-trigger-active] {
-      transform: translateX(35px);
+      opacity: 1;
+      transform: translateX(20px);
 
       & .progress {
         display: block;
@@ -52,7 +66,7 @@
   &__link {
     cursor: pointer;
     color: white;
-    font-size: 38px;
+    font-size: 48px;
     font-weight: 700;
     text-transform: uppercase;
   }
@@ -75,4 +89,8 @@
 @keyframes progressBar {
   0% { width: 0; }
   100% { width: 100%; }
+}
+
+.visually-hidden2 {
+  display: block;
 }
