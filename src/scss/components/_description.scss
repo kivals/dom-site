@@ -1,0 +1,36 @@
+.description {
+  &__bg {
+    background-image: url("/img/bg8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 25px;
+  }
+
+  &__text {
+    color: var(--white);
+    width: 400px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 66px;
+    line-height: 1;
+  }
+
+  &__description {
+    font-size: 18px;
+  }
+
+  &__image {
+    width: 500px;
+  }
+
+  &__gradient {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(red, .7);
+  }
+}
