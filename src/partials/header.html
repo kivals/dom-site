@@ -1,22 +1,23 @@
-<header class="header">
-  <div class="container">
-    <div class="header__body">
-      <div class="logo">
-        <picture>
-          <source srcset="img/logo.webp" type="image/webp">
-          <img loading="lazy" src="img/logo.png" class="header__logo" width="200" height="200" alt="Логотип танцевальной студии ДОМ">
-        </picture>
-      </div>
-      <div class="header__content">
-        <a href="tel:+7(8652)44-38-28" class="header__phone">+7 (920) 44-38-28</a>
-        <button class="header__button btn-reset">Записаться</button>
-        <div class="header__menu menu" data-graph-path="menu">
-          <button class="menu__burger burger" aria-label="Открыть меню" aria-expanded="false">
-            <span class="burger__line"></span>
-          </button>
-          <span class="menu__title">Меню</span>
-        </div>
-      </div>
+<header class="header container">
+  <div class="header__body">
+    <div class="header__logo">
+      <picture>
+        <source type="image/webp" srcset="img/logo/logo@1x.webp 1x, img/logo/logo@2x.webp 2x" >
+        <img width="200" height="118" loading="lazy"
+             src="img/logo/logo@1x.png"
+             srcset="img/logo/logo@2x.png 2x"
+             alt="Логотип танцевальной студии ДОМ">
+      </picture>
+    </div>
+    <div class="header__content">
+      <a href="tel:+7(8652)44-38-28" class="header__phone">+7 (920) 44-38-28</a>
+      <button class="header__button btn-reset">Записаться</button>
+      <div class="header__menu menu" data-graph-path="menu">
+        <button class="menu__burger burger" aria-label="Открыть меню" aria-expanded="false">
+          <span class="burger__line"></span>
+        </button>
+        <span class="menu__title">Меню</span>
       </div>
     </div>
+  </div>
 </header>

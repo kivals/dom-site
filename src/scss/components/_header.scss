@@ -6,7 +6,15 @@
   }
 
   &__logo {
-    width: 200px;
+    display: flex;
+    flex-shrink: 0;
+    flex-basis: 200px;
+    align-items: center;
+    height: 118px;
+
+    @include tablet {
+      flex-basis: 150px;
+    }
   }
 
   &__content {
@@ -16,37 +24,61 @@
   }
 
   &__phone {
-    font-size: 14px;
-    font-weight: 700;
-    color: white;
     margin-right: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--white);
+
+    @include tablet {
+      margin-right: 30px;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__button {
     width: 190px;
-    background-color: var(--brand-color);
-    color: var(--background-color);
+    height: 100%;
     font-weight: 700;
     font-size: 14px;
-    height: 100%;
+    letter-spacing: 1px;
+    color: var(--background-color);
+    background-color: var(--brand-color);
+
+    @include mobile {
+      width: 100px;
+      font-size: 12px;
+    }
   }
 
   &__menu {
+    border: 2px solid var(--brand-color);
     width: 190px;
     height: 100%;
-    border: 2px solid var(--brand-color);
+
+    @include tablet {
+      width: auto;
+    }
   }
 }
 
 .menu {
   display: flex;
   align-items: center;
+  padding-right: 20px;
   padding-left: 20px;
-  gap: 10px;
   cursor: pointer;
+  gap: 10px;
 
   &__title {
+    font-size: 14px;
+    letter-spacing: 1px;
     color: var(--brand-color);
-    font-size: 12px;
+
+    @include tablet {
+      display: none;
+    }
   }
 }
