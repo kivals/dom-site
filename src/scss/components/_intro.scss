@@ -45,6 +45,14 @@
 
     &:not(:last-child) {
       margin-bottom: 30px;
+
+      @include tablet {
+        margin-bottom: 18px;
+      }
+
+      @include mobile {
+        margin-bottom: 14px;
+      }
     }
 
     &:hover {
@@ -58,7 +66,6 @@
       & .progress {
         display: block;
         animation: progressBar 5s linear;
-      //  animation-iteration-count: on;
       }
     }
   }
@@ -69,6 +76,18 @@
     font-size: 48px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include for-desktop {
+      font-size: 36px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 }
 
