@@ -11,8 +11,12 @@
       <div class="menu-modal__right">
         <div class="menu-modal__header">
           <picture>
-            <source srcset="img/logo.webp" type="image/webp">
-            <img loading="lazy" src="img/logo.png" class="menu-modal__logo" width="150" height="150" alt="Логотип танцевальной студии ДОМ">
+            <source type="image/webp" srcset="img/logo/logo@1x.webp 1x, img/logo/logo@2x.webp 2x" >
+            <img width="150" height="150" loading="lazy"
+                 class="menu-modal__logo"
+                 src="img/logo/logo@1x.png"
+                 srcset="img/logo/logo@2x.png 2x"
+                 alt="Логотип танцевальной студии ДОМ">
           </picture>
           <p class="menu-modal__header-text">Меню</p>
         </div>

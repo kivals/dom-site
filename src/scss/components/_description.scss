@@ -1,12 +1,13 @@
 .description {
   &__bg {
-    background-image: image-set(
-        url("/img/description/bg.webp") type("image/webp"),
-        url("/img/description/bg.png")
-    );
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 100px 25px;
+    background-image: url("/img/description/bg.png");
+    background-image:
+      image-set(
+        url(/img/description/bg.webp) type("image/webp"),
+        url(/img/description/bg.png));
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @include tablet {
       background-position-x: 80%;
@@ -14,14 +15,14 @@
   }
 
   &__text {
-    color: var(--white);
     max-width: 400px;
+    color: var(--white);
   }
 
   &__title {
-    text-transform: uppercase;
     font-size: 66px;
     line-height: 1;
+    text-transform: uppercase;
 
     @include for-desktop {
       font-size: 48px;
@@ -62,6 +63,6 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(red, .7);
+    background-color: rgb(red, 0.7);
   }
 }
