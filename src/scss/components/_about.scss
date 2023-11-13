@@ -1,0 +1,26 @@
+.about {
+  &__title {
+    font-size: 58px;
+    color: var(--white);
+  }
+
+  &__body {
+    display: flex;
+    overflow: visible;
+  }
+
+  &__left {
+    position: sticky;
+    top: 0;
+    width: 50%;
+    height: 150px;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__list-item {
+    height: 400px;
+  }
+}
